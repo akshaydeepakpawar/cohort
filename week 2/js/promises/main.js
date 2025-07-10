@@ -75,4 +75,4 @@ function setTimeOutPromisified(time)
 function main(){
     console.log("hey 3 sec is done"); 
 }
-setTimeOutPromisified(3000).then(main);
+setTimeOutPromisified(3000).then(main); 

@@ -4,7 +4,7 @@
  * the function should return a promise just like before
  */
 
-//bad practive but its async wait with blocking
+//bad practice but its async wait with blocking
 
 // function sleep(milliseconds) {
 //     return new Promise(resolve=>{

@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do</title>
+    <title>Document</title>
 </head>
 <body>
-    <input type="text" onfocus="this.value=''" placeholder="enter the text here">
-    <button onclick="AddTask()">Add Task</button>
-
+    <input type="text" placeholder="enter task here">
+    <button onclick="addtodo()">Add ToDo</button>
+    <div id="todos"></div>
     <script>
-        let ctr=1;
-        function AddTask(){
-            const getEle=document.querySelector("input");
-            const divEle=document.createElement("div");
-            divEle.setAttribute("id",ctr);
-            divEle.innerHTML=`<h4>${getEle.value}</h4><button onclick="DeleteTask(${ctr})">Delete Task</button>`;
-            document.querySelector("body").appendChild(divEle);  
-            ctr++;
-        } 
-        function DeleteTask(index){
-            const getEle=document.getElementById(index);
-            getEle.parentNode.removeChild(getEle);
+        let todos=[];
+        function addtodo(){
+            todos.push({
+                title:document.querySelector("input").value
+            })
+            render()
+        }
+        function deletetodo(index){
+            todos.splice(index,1)
+            render();
+        }
+
+        function createtodo(todo,index){
+            const div=document.createElement("div")
+            const h1=document.createElement("h1")
+            const button=document.createElement("button")
+            button.onclick=function(){
+                deletetodo(index);
+            }
+            button.innerHTML="Delete"
+            h1.innerHTML=todo.title
+            div.append(h1)
+            div.append(button)
+            return div;
+        }
+
+        function render(){
+        document.querySelector("#todos").innerHTML="";
+        for(let i=0;i<todos.length;i++)
+        {
+            const element=createtodo(todos[i],i);
+            document.querySelector("#todos").appendChild(element);
+        }
         }
     </script>
 </body>
