@@ -57,3 +57,11 @@ $RECYCLE.BIN/
 
 # Optional: if using React
 *.cache/
+express class/package-lock.json
+express class/package.json
+middelware/package-lock.json
+middelware/package.json
+.gitignore
+.gitignore
+middelware/01-middlewares/package.json
+middelware/01-middlewares/package-lock.json
