@@ -65,3 +65,9 @@ middelware/package.json
 .gitignore
 middelware/01-middlewares/package.json
 middelware/01-middlewares/package-lock.json
+week 5/package-lock.json
+.gitignore
+middelware/01-middlewares/03-errorcount.js
+week-5-cors/package.json
+week-5-cors/package-lock.json
+week 5/package.json
