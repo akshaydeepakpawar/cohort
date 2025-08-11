@@ -71,3 +71,6 @@ middelware/01-middlewares/03-errorcount.js
 week-5-cors/package.json
 week-5-cors/package-lock.json
 week 5/package.json
+week 6/Authentication/package-lock.json
+week 6/Authentication/package.json
+.DS_Store
