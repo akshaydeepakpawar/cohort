@@ -5,7 +5,7 @@ const {UserModel,TodoModel}=require("./db")
 const mongoose=require("mongoose");
 const app=express();
 app.use(express.json());
-mongoose.connect("mongodb+srv://akshay:yepasshe@cluster0.th96dyz.mongodb.net/todo-akshay-786")
+mongoose.connect("")
 
 app.post("/signup",async (req,res)=>{
    const { email, password, name } = req.body;
